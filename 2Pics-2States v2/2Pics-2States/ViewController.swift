@@ -27,13 +27,12 @@ class ViewController: UIViewController {
         
     }
     @IBAction func nextVarButtonPressed(_ sender: UIButton) {
-        let rootVC = ViewController2()
+        guard let rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier:"ViewController2") as? ViewController2 else {return}
         let navVC = UINavigationController(rootViewController: rootVC)
         navVC.navigationBar.prefersLargeTitles = true
         present(navVC,animated: true)
     }
     @IBAction func thirdVarButtonPressed(_ sender: UIButton) {
-        
         let rootVC = ViewController3()
         let navVC = UINavigationController(rootViewController: rootVC)
         navVC.navigationBar.prefersLargeTitles = true

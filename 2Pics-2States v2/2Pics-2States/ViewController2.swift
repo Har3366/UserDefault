@@ -2,8 +2,8 @@ import UIKit
 
 class ViewController2: UIViewController {
     
-    @IBOutlet weak var imageView:UIImageView!
-
+    @IBOutlet weak var imageView: UIImageView!
+    
     let key = "VC2"
 
     override func viewDidLoad() {
@@ -13,7 +13,7 @@ class ViewController2: UIViewController {
         imagePlacement()
         switcherPlacement()
     }
-    
+   
     func switcherPlacement(){
         let switcher = UISwitch(frame: CGRect(x: 20, y: 670, width: 0, height:0))
         switcher.onTintColor = .lightGray
@@ -40,6 +40,7 @@ class ViewController2: UIViewController {
         view.addSubview(imageView)
         
     }
+    
 
 }
 
